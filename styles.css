@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+:root{
+    --t1-bg:hsl(222, 26%, 31%);
+    --t1-calc:hsl(224, 36%, 15%);
+    --t1-btns:hsl(223, 31%, 20%);
+
+    --t1-res-bg:hsl(225, 21%, 49%);
+    --t1-res-shadow:hsl(224, 28%, 35%);
+
+    --t1-equ-bg:hsl(6, 63%, 50%);
+    --t1-equ-shadow:hsl(6, 70%, 34%);
+
+    --t1-key-bg:hsl(30, 25%, 89%);
+    --t1-key-shadow:hsl(28, 16%, 65%);
+
+    --t1-text:hsl(221, 14%, 31%);
+
+    /* --------------- THEME 1 ----------------*/
+
+    --t2-bg:hsl(0, 0%, 90%);
+    --t2-calc:hsl(0, 0%, 93%);
+    --t2-btns:hsl(0, 5%, 81%);
+
+    --t2-res-bg:hsl(185, 42%, 37%);
+    --t2-res-shadow:hsl(185, 58%, 25%);
+
+    --t2-equ-bg:hsl(25, 98%, 40%);
+    --t2-equ-shadow: hsl(25, 99%, 27%);
+
+    --t2-key-bg:hsl(45, 7%, 89%);
+    --t2-key-shadow:hsl(35, 11%, 61%);
+
+    --t2-text:hsl(60, 10%, 19%);
+
+    /* --------------- THEME 2 ----------------*/
+
+    --t3-bg:hsl(268, 75%, 9%);
+    --t3-calc:hsl(268, 71%, 12%);
+    --t3-btns:hsl(268, 71%, 12%);
+
+    --t3-res-bg:hsl(281, 89%, 26%);
+    --t3-res-shadow:hsl(285, 91%, 52%);
+
+    --t3-equ-bg:hsl(176, 100%, 44%);
+    --t3-equ-shadow: hsl(177, 92%, 70%);
+
+    --t3-key-bg: hsl(268, 47%, 21%);
+    --t3-key-shadow:hsl(290, 70%, 36%);
+
+    --t3-text:hsl(52, 100%, 62%);
+    --t3-text2:hsl(198, 20%, 13%);
+
+    /* --------------- THEME 3 ----------------*/
+}   
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body.t1{
+    background-color: var(--t1-bg);
+}
+
+body.t2{
+    background-color: var(--t2-bg);
+}
+
+body.t3{
+    background-color: var(--t3-bg);
+}
+
+.container{
+    background-color: rgba(250, 235, 215, 0);
+    padding: 1rem;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+body.t1 .container{
+    color: white;
+}
+
+body.t2 .container{
+    color: var(--t2-text);
+}
+
+body.t3 .container{
+    color: var(--t3-text);
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+.theme-changer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-changer span{
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.numbers{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: .2rem;
+}
+
+.toggle-box{
+    cursor: pointer;
+}
+
+.toggle-btn{
+    padding: .2rem 1.8rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+body.t1 .toggle-btn{
+    background-color: var(--t1-btns);
+}
+
+body.t2 .toggle-btn{
+    background-color: var(--t2-btns);
+}
+
+body.t3 .toggle-btn{
+    background-color: var(--t3-btns);
+}
+
+.circle{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    transition: .3s ease;
+}
+
+body.t1 .circle{
+    background-color: var(--t1-equ-bg);
+    transform: translateX(-150%);
+}
+
+body.t2 .circle{
+    background-color: var(--t2-equ-bg);
+    transform: translateX(0);
+}
+
+body.t3 .circle{
+    background-color: var(--t3-equ-bg);
+    transform: translateX(150%);
+}
+
+.calc-area{  
+    padding:1.5rem 1rem ;
+    border-radius: .6rem;
+    text-align: right;
+    min-height: 5rem;
+}
+
+body.t1 .calc-area{
+    background-color: var(--t1-calc);
+}
+
+body.t2 .calc-area{
+    background-color: var(--t2-calc);
+}
+
+body.t3 .calc-area{
+    background-color: var(--t3-calc);
+}
+
+.buttons-area{ 
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    border-radius: .6rem;
+}
+
+body.t1 .buttons-area{
+    background-color: var(--t1-btns);
+}
+
+body.t2 .buttons-area{
+    background-color: var(--t2-btns);
+}
+
+body.t3 .buttons-area{
+    background-color: var(--t3-btns);
+}
+
+button{
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: .5rem;
+    border: none;
+    font-weight: bolder;
+    position: relative;
+    z-index: 999;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+body.t1 button{
+    background-color: var(--t1-key-bg);
+    box-shadow: 0px 5px 0px 0px var(--t1-key-shadow);
+}
+
+body.t2 button{
+    background-color: var(--t2-key-bg);
+    box-shadow: 0px 5px 0px 0px var(--t2-key-shadow);
+}
+
+body.t3 button{
+    background-color: var(--t3-key-bg);
+    box-shadow: 0px 5px 0px 0px var(--t3-key-shadow);
+}
+
+body.t1 button:hover,body.t2 button:hover,body.t3 button:hover{
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+.equals,.reset{
+    grid-column: span 2;
+    width: 100%;
+}
+
+button.number{
+    font-size: 2rem;
+    
+}
+
+body.t1 button.number{
+    color: var(--t1-text);
+}
+
+body.t2 button.number{
+    color: var(--t2-text);
+}
+
+body.t3 button.number{
+    color: var(--t3-text);
+}
+
+body.t1 .plus,body.t1 .minus,body.t1 .divide,body.t1 .multiply{
+    font-size: 2rem;
+    color: var(--t1-text);
+}
+
+body.t2 .plus,body.t2 .minus,body.t2 .divide,body.t2 .multiply{
+    font-size: 2rem;
+    color: var(--t2-text);
+}
+
+body.t3 .plus,body.t3 .minus,body.t3 .divide,body.t3 .multiply{
+    font-size: 2rem;
+    color: var(--t3-text);
+}
+
+body.t1 .reset,body.t1 .delete{
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--t1-res-bg);
+    box-shadow: 0px 5px 0px 0px var(--t1-res-shadow);
+}
+
+body.t2 .reset,body.t2 .delete{
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--t2-res-bg);
+    box-shadow: 0px 5px 0px 0px var(--t2-res-shadow);
+}
+
+body.t3 .reset,body.t3 .delete{
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--t3-res-bg);
+    box-shadow: 0px 5px 0px 0px var(--t3-res-shadow);
+}
+
+.equals{
+    font-size: 1.2rem;
+}
+
+body.t1 .equals{
+    color: white;
+    background-color: var(--t1-equ-bg);
+    box-shadow: 0px 5px 0px 0px var(--t1-equ-shadow);
+}
+
+body.t2 .equals{
+    color: white;
+    background-color: var(--t2-equ-bg);
+    box-shadow: 0px 5px 0px 0px var(--t2-equ-shadow);
+}
+
+body.t3 .equals{
+    color: var(--t3-text2);
+    background-color: var(--t3-equ-bg);
+    box-shadow: 0px 5px 0px 0px var(--t3-equ-shadow);
+}

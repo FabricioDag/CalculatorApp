@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Fabrício DG | Calculator app</title>
+  <script src="./scripts.js" defer></script>
+
+</head>
+<body id="body" class="t2">
+
+  <main class="container">
+    <header>
+      <h1>calc</h1>
+      <div class="theme-changer">
+        <span>theme</span>
+        <div class="toggle-box">
+          <div class="numbers">
+            <small>1</small>
+            <small>2</small>
+            <small>3</small>
+          </div>
+          <div class="toggle-btn">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="calc-area">
+      <h1 id="mainCalc"></h1>
+    </div>
+
+    <div class="buttons-area">
+
+      <button class="number">
+        7
+      </button>
+      <button class="number">
+        8
+      </button>
+      <button class="number">
+        9
+      </button>
+
+      <button class="delete" onclick="del()">
+        DEL
+      </button>
+
+      <button class="number">
+        4
+      </button>
+      <button class="number">
+        5
+      </button>
+      <button class="number">
+        6
+      </button>
+
+      <button class="plus" onclick="sum()">
+        +
+      </button>
+
+      <button class="number">
+        1
+      </button>
+
+      <button class="number">
+        2
+      </button>
+
+      <button class="number">
+        3
+      </button>
+
+      <button class="minus" onclick="minus()">
+        -
+      </button>
+
+      <button class="number">
+        .
+      </button>
+
+      <button class="number">
+        0
+      </button>
+
+      <button class="divide" onclick="divide()">
+        /
+      </button>
+
+      <button class="multiply" onclick="multiply()">
+        x
+      </button>
+
+      <button class="action reset" onclick="reset()">
+        RESET
+      </button>
+
+      <button class="action equals" onclick="equals()">
+        =
+      </button>
+
+    </div>
+  </main>
+  
+</body>
+</html>
