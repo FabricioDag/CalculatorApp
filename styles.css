@@ -64,6 +64,7 @@ body{
     display: grid;
     place-items: center;
     font-family: 'League Spartan', sans-serif;
+    transition: .3s ease;
 }
 
 body.t1{

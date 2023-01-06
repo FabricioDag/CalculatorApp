@@ -1,6 +1,8 @@
 numBtns = document.querySelectorAll(".number")
 numCalc = document.getElementById("mainCalc")
 
+let body = document.getElementById("body")
+
 var operation = 0 // 1==plus 2==minus 3==divide 4==multiply
 
 var factorA = null
@@ -92,5 +94,30 @@ function equals(){
     }
     
 }
+
+let theme = 0;
+let lastTheme = 2;
+let themes = [
+    {name:"t1"},
+    {name:"t2"},
+    {name:"t3"}
+];
+
+function selectTheme(){
+    if(theme < 2){
+        ++theme
+        lastTheme = theme - 1
+    }else{
+        theme = 0
+        lastTheme = 2
+    }
+    console.log(theme)
+    body.classList.remove(themes[lastTheme].name)
+    body.classList.add(themes[theme].name)
+}
+
+
+
+selectTheme()
 
 
